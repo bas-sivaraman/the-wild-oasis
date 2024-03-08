@@ -1,10 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledFormRow = styled.div`
-  display: grid;
-  align-items: center;
-  grid-template-columns: 24rem 1fr 1.2fr;
-  gap: 2.4rem;
+const StyledFormRow = styled(({ type, ...rest }) => <div {...rest} />)`
+  ${(props) =>
+    props.type === "vertical"
+      ? css`
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+        `
+      : css`
+          display: grid;
+          align-items: center;
+          grid-template-columns: 24rem 1fr 1.2fr;
+          gap: 2.4rem;
+        `}
 
   padding: 1.2rem 0;
 
@@ -22,8 +31,14 @@ const StyledFormRow = styled.div`
 
   &:has(button) {
     display: flex;
-    justify-content: flex-end;
-    gap: 1.2rem;
+    ${(props) =>
+      props.type === "vertical"
+        ? css`
+            justify-content: stretch;
+          `
+        : css`
+            justify-content: flex-end;
+          `}
   }
 `;
 
@@ -36,11 +51,11 @@ const Error = styled.span`
   color: var(--color-red-700);
 `;
 
-function FormRow({ label, children, error }) {
-  if (!label) return <StyledFormRow>{children}</StyledFormRow>;
+function FormRow({ label, children, error, type }) {
+  if (!label) return <StyledFormRow type={type}>{children}</StyledFormRow>;
 
   return (
-    <StyledFormRow>
+    <StyledFormRow type={type}>
       <Label htmlFor={children.props.id}>{label}</Label>
       {children}
       {error && <Error>{error.message}</Error>}
