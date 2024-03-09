@@ -37,4 +37,5 @@ The application has a lot of features such as checking in and out a guest, updat
 
 ## Helpful Links
   * [The Wild Oasis - Project link](https://the-wild-oasis-ashy-beta.vercel.app)
-  * [Other projects]
+  * Other projects
+    * [Pizza Stop](https://pizza-stop.vercel.app/)
