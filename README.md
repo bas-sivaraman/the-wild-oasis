@@ -33,5 +33,5 @@ The application has a lot of features such as checking in and out a guest, updat
   * **Account** page in the header menu lets a user update his/her information.
 
 ## Helpful Links
-  * [The Wild Oasis - Project link]
+  * [The Wild Oasis - Project link](https://the-wild-oasis-ashy-beta.vercel.app/login)
   * [Other projects]
