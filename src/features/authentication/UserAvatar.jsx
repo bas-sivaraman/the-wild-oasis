@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useUser } from "./useUser";
+import { useNavigate } from "react-router-dom";
 
 const StyledUserAvatar = styled.div`
   display: flex;
@@ -23,7 +24,15 @@ const Avatar = styled.img`
 
 function UserAvatar() {
   const { user } = useUser();
+  const navigate = useNavigate();
+
+  if (!user) {
+    navigate("/login");
+    return;
+  }
+
   const { fullName, avatar } = user.user_metadata;
+
   return (
     <StyledUserAvatar>
       <Avatar
