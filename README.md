@@ -32,6 +32,9 @@ The application has a lot of features such as checking in and out a guest, updat
   * **Settings** exposes a form to modify certain aspects of hotel's service.
   * **Account** page in the header menu lets a user update his/her information.
 
+## Guidelines to use the project
+  As a new user can only be created inside the application, I have left a user credential in the login page for use. Please login with it and create a new user and get authenticated by verifying the confirmation email. The application already has a sample data to work with, please make sure to use it with care while modifying or deleting a booking. I will also try to keep updating sample data until I release a feature to create new bookings. Hope you have fun!
+
 ## Helpful Links
-  * [The Wild Oasis - Project link](https://the-wild-oasis-ashy-beta.vercel.app/login)
+  * [The Wild Oasis - Project link](https://the-wild-oasis-ashy-beta.vercel.app)
   * [Other projects]
