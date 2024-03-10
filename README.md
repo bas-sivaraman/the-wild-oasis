@@ -39,3 +39,4 @@ The application has a lot of features such as checking in and out a guest, updat
   * [The Wild Oasis - Project link](https://the-wild-oasis-ashy-beta.vercel.app)
   * Other projects
     * [Pizza Stop](https://github.com/bas-sivaraman/pizza-stop)
+    * [React Quiz](https://github.com/bas-sivaraman/react-quiz)
